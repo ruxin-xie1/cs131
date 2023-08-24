@@ -1,0 +1,211 @@
+    1  wget www.github.com
+    2  dir
+    3  passwd
+    4  dir
+    5  passwd
+    6  dir
+    7  dir
+    8  cd ..
+    9  dir
+   10  cd vo23fa
+   11  cd ruxin23fa
+   12  dir
+   13  git init
+   14  dir
+   15  passwd
+   16  dir
+   17  passwd
+   18  echo $SHELL
+   19  dir
+   20  mkdir cs131
+   21  dir
+   22  cd cs131
+   23  dir
+   24  mkdir ws1
+   25  dir
+   26  cd ws1
+   27  cd cs 131
+   28  cd 131
+   29  cd cs131
+   30  dir
+   31  ws1
+   32  cd ws1
+   33  git init
+   34  touch newfile.txt
+   35  dir
+   36  ls
+   37  git status
+   38  git add
+   39  git status
+   40  git add newfile.txt
+   41  git status
+   42  git commit -m "message123"
+   43  git commit -m "First commit"
+   44  dir
+   45  git status
+   46  git commit -m "First commit"
+   47  git config --global user.name "Ruxin-xie"
+   48  git commit -m "First commit"
+   49  git branch
+   50  git checkout -b <my-new-branch>
+   51  git checkout -b <my branch name>
+   52  git branch
+   53  git checkout -b<my branch name>
+   54  git checkout -b <new-branch>
+   55  git checkout -b new-branch
+   56  git branch
+   57  git remote add origin get@github.com:ruxin-xie/cs131.git
+   58  git branch -M main
+   59  git push -u origin main
+   60  git remote add origin get@github.com:ruxin-xie/cs131.git
+   61  git remote add origin get@github.com:ruxin-xie/cs131.git
+   62  git branch -M main
+   63  git push -u origin master
+   64  git push origin new-branch
+   65  git branch
+   66  git checkout -b new-branch
+   67  git branch
+   68  git push origin new-branch
+   69  git branch
+   70  git remote add origin get@github.com:ruxin-xie/cs131.git
+   71  git push -u origin master
+   72  git branch
+   73  git push -u origin new-branch
+   74  git remote add origin get@github.com:ruxin-xie/cs131.git
+   75  git push -u origin master
+   76  git push -u origin main
+   77  git remote add origin get@github.com:ruxin-xie/cs131a.git
+   78  dir
+   79  git config --global user.email "ruxin.xie01@sjsu.edu"
+   80  hit status
+   81  git status
+   82  git branch
+   83  git switch master
+   84  git branch
+   85  git status
+   86  dir
+   87  touch newfile.txt
+   88  git status
+   89  git init
+   90  touch newfile.txt
+   91  git status
+   92  dir
+   93  touch new.txt
+   94  git status
+   95  git add new.txt
+   96  git status
+   97  git commit -m "This is my first commit!"
+   98  git branch
+   99  git switch new-branch
+  100  git branch
+  101  git remote add origin https://git remote add origin https://github.com/ruxin-xie/cs131.git
+  102  git remote add origin https://github.com/ruxin-xie/cs131.git
+  103  git push -u origin master
+  104  history > cmds.log
+  105  git push -u origin master
+  106  eval "$(ssh-agent -s)"
+  107  ssh-add-l -E md5
+  108  ssh-add -l -E md5
+  109  ssh-keygen
+  110  git push -u origin master
+  111  cat id_rsa.pub
+  112  cd ..
+  113  cd /
+  114  dir
+  115  cd home
+  116  dir
+  117  cd ruxin23fa
+  118  dir
+  119  ls
+  120  cd ws1
+  121  cd ..
+  122  cd ~
+  123  dir
+  124  git push -u origin master
+  125  cd cs131
+  126  dir
+  127  cd ws1
+  128  git push -u origin master
+  129  git branch
+  130  ssh-keygen -t rsa
+  131  pbcopy < ~/.ssh/id_rsa.pub
+  132  dir
+  133  pbcopy < ~/.ssh/id_rsa.pub
+  134  pbcopy 123456.pub
+  135  pbcopy < 123456.pub
+  136  pbcopy < ~/.ssh/id_rsa.pub
+  137  dir
+  138  cd 123456
+  139  cat 123456.pub
+  140  git push -u origin master
+  141  git push -u origin new-branch
+  142  git branch
+  143  git remote add origin https://github.com/ruxin-xie/cs131.git
+  144  git push origin master
+  145  git remote add origin https://github.com/ruxin-xie/cs131.git
+  146  git branch
+  147  git init
+  148  touch newfile.txt
+  149  git status
+  150  git add newfile.txt
+  151  git status
+  152  git commit -m "This is my first commit!"
+  153  git branch
+  154  git checkout -b my-new-branch
+  155  git branch
+  156  git remote add origin https://github.com/ruxin-xie/cs131.g
+  157  git push -u origin master
+  158  git push origin master
+  159  git remote add origin https://github.com/ruxin-xie/cs131.git
+  160  git remote add origin git@gitgub.com:ruxin-xie/cs131.git
+  161  git push origin master
+  162  git push origin my-new-branch
+  163  ssh-keygen -t rsa
+  164  pbcopy < ~/.ssh/id_rsa.pub
+  165  dir
+  166  cat 123
+  167  cat 123.pub
+  168  git push origin master
+  169  git config --global user.name "Ruxin-xie"
+  170  git push origin master
+  171  dir
+  172  wget www.github.com
+  173  sudo dnf install git-all
+  174  mkdir myprojet
+  175  cd myprojet/
+  176  dir
+  177  git init
+  178  touch newfile.txt
+  179  ls
+  180  git status
+  181  git add newfile.txt
+  182  git status
+  183  git commit -m "This is my firstcommit!"
+  184  git checkout -b my-new-branch
+  185  git branch
+  186  git remote add origin https://github.com/ruxin-xie1/cs131.git
+  187  git push -u origin master
+  188  git branch -M main
+  189  git push -u origin main
+  190  git push -u origin master
+  191  dir
+  192  history > cmds.log
+  193  dir
+  194  cat cmds.log
+  195  dir
+  196  git branch
+  197  git switch master
+  198  git branch
+  199  dir
+  200  git push -u origin master
+  201  ssh-keygen -t rsa
+  202  cat 111.pub
+  203  git push -u origin master
+  204  git remote add origin https://github.com/ruxin-xie1/cs131.git
+  205  git push -u origin master
+  206  git branch
+  207  git checkout -b my-new-branch
+  208  git branch
+  209  git push -u origin my-new-branch
+  210  dir
+  211  history > cmds.log
