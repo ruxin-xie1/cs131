@@ -5,8 +5,8 @@
   594  ls
   596  tar zxvf taxidata.tar.gz
   598  grep '","2019-03-12' taxidata/2019-03.csv > re.txt
-  599  tail -n 10 re.txt > results.txt
-  600  wc -l re.txt >> results.txt
+  599  tail -n 20 re.txt > results.txt
+  600  wc re.txt >> results.txt
   602  cat results.txt
   609  ls
   612  history > cmds.log
