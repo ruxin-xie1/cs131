@@ -1,0 +1,8 @@
+Top 3 pickup-locations for 2019-01
+ 169442 0.8
+ 166740 0.9
+ 163490 0.7
+Top 3 pickup-locations for 2019-02
+ 148190 0.8
+ 147305 0.9
+ 142869 1.0
