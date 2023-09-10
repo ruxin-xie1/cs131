@@ -1,0 +1,120 @@
+1, Use "mkdir a1" command to create a diretory named a1, and use "cd a1" command to change to it.
+Output:
+[ruxin23fa@sjsu myprojet]$ cd a1
+[ruxin23fa@sjsu a1]$
+
+2, Use "echo $HOME" command to find home directory.
+Output:
+/mnt/scratch/ruxin23fa
+
+3, Use "id" to find UID and group.
+Output:
+uid=1035(ruxin23fa) gid=1035(ruxin23fa) groups=1035(ruxin23fa)
+
+4, Use "mkdir temp" to create a directory named temp.
+Use "chmod u-x temp" to remove execute permission for myself.
+Output:
+-bash: cd: temp: Permission denied
+So, I can't cd in this dirctory.
+I can ls it.
+Output:
+a1.txt  temp
+I can ls -l it.
+Output:
+-rw-rw-r-- 1 ruxin23fa ruxin23fa 2926 Sep  9 23:58 a1.txt
+drw-rwxr-x 2 ruxin23fa ruxin23fa 4096 Sep  9 23:47 temp
+I can't create file under it because the permission denied.
+
+5, Use "mkdir temp2" to create a directory named temp2.
+I can use "mv" to rename and move files and directories from one location to another.
+Output:
+[ruxin23fa@sjsu a1]$ mkdir temp2
+[ruxin23fa@sjsu a1]$ mv temp2 temp3
+[ruxin23fa@sjsu a1]$ ls
+a1.txt  temp3
+I can use "cp -r temp2 temp3" to copy a directory.
+Output:
+[ruxin23fa@sjsu a1]$ cp -r temp2 temp3
+[ruxin23fa@sjsu a1]$ ls
+a1.txt  temp2  temp3
+[ruxin23fa@sjsu a1]$ cd temp3
+[ruxin23fa@sjsu temp3]$ ls
+temp2
+
+6, Use "ls /proc/ | grep "mem.*"" command to find any files has meminfo. 
+Output:
+iomem
+meminfo
+And use "ls /proc/ | cpu.*"" to find any files has cpuinfo. 
+Output:
+cpuinfo
+
+7,use "head meminfo" to find the infomation of memory. And the total memory is 73080512 kB.
+Output:
+MemTotal:       73080512 kB
+MemFree:        12548480 kB
+MemAvailable:   60625984 kB
+Buffers:          307840 kB
+Cached:         49367808 kB
+SwapCached:         6400 kB
+Active:         29994560 kB
+Inactive:       20238912 kB
+Active(anon):     455296 kB
+Inactive(anon):  1112000 kB
+
+8,Use "cat /proc/cpuinfo | head -n 10" command to find first 10 lines of cpuinfo.
+Output:
+processor       : 0
+cpu             : POWER8 (architected), altivec supported
+clock           : 3425.000000MHz
+revision        : 2.1 (pvr 004b 0201)
+
+processor       : 1
+cpu             : POWER8 (architected), altivec supported
+clock           : 3425.000000MHz
+revision        : 2.1 (pvr 004b 0201)
+
+Use "cat /proc/cpuinfo | tail -n 10" command to find last 10 lines of cpuinfo.
+Output:
+processor       : 255
+cpu             : POWER8 (architected), altivec supported
+clock           : 3425.000000MHz
+revision        : 2.1 (pvr 004b 0201)
+
+timebase        : 512000000
+platform        : pSeries
+model           : IBM,8247-22L
+machine         : CHRP IBM,8247-22L
+MMU             : Hash
+
+The total numbers of processors are 256.
+The CPU architected is POWER8 (architected), altivec supported.
+The CPU clock speed is 3425.000000MHz.
+The revision is 2.1 (pvr 004b 0201).
+
+9, Use "cat /etc/os-release" commmand to find the information of operating system version.
+Output:
+NAME="Red Hat Enterprise Linux"
+VERSION="8.6 (Ootpa)"
+ID="rhel"
+ID_LIKE="fedora"
+VERSION_ID="8.6"
+PLATFORM_ID="platform:el8"
+PRETTY_NAME="Red Hat Enterprise Linux 8.6 (Ootpa)"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:redhat:enterprise_linux:8::baseos"
+HOME_URL="https://www.redhat.com/"
+DOCUMENTATION_URL="https://access.redhat.com/documentation/red_hat_enterprise_linux/8/"
+BUG_REPORT_URL="https://bugzilla.redhat.com/"
+
+REDHAT_BUGZILLA_PRODUCT="Red Hat Enterprise Linux 8"
+REDHAT_BUGZILLA_PRODUCT_VERSION=8.6
+REDHAT_SUPPORT_PRODUCT="Red Hat Enterprise Linux"
+REDHAT_SUPPORT_PRODUCT_VERSION="8.6"
+
+/etc/os-release can find the information of the OS.
+
+10, Use "ls -l /etc/os-release" to find the permission (given to all users) for the file containing the OS version information.
+Output:
+lrwxrwxrwx. 1 root root 22 Apr  6  2022 os-release -> ..//usr/lib/os-release
+
