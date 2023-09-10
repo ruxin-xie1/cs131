@@ -2,9 +2,9 @@
   931  mkdir ws3
   932  cp 2019-01.csv ~/myprojet/ws3
   933  cp 2019-02.csv ~/myprojet/ws3
-  934  cat 2019-01.csv |  cut -d "," -f 5 | sort -n | uniq -c > count1.txt
+  934  cat 2019-01.csv |  cut -d "," -f 8 | sort -n | uniq -c > count1.txt
   935  sort -nr count1.txt | head -n 3 > ws3.txt
-  936  cat 2019-02.csv |  cut -d "," -f 5 | sort -n | uniq -c > count2.txt
+  936  cat 2019-02.csv |  cut -d "," -f 8 | sort -n | uniq -c > count2.txt
   937  sort -nr count2.txt | head -n 3 >> ws3.txt
   947  vi ws3.txt
   948  cat ws3.txt
