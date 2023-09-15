@@ -1,0 +1,36 @@
+(Task 1: Write an alias called "l" for "ls -ltr" and w" for "ls -l | wc")
+[ruxin23fa@sjsu FARE]$ vi ~/.bashrc									(Edit .bashrc file)
+[ruxin23fa@sjsu FARE]$ cat ~/.bashrc									(print content of .bashrc file)
+
+alias w="ls -l | wc"
+
+alias l="ls -ltr"
+
+[ruxin23fa@sjsu FARE]$ source ~/.bashrc									(Reload ./bashrc file)
+[ruxin23fa@sjsu FARE]$ l										(Use 'l' for 'ls -ltr' command)
+total 860132
+-rw-r--r-- 1 ruxin23fa ruxin23fa 879142625 Sep 14 17:09 2019-06.csv
+-rw-rw-r-- 1 ruxin23fa ruxin23fa    187237 Sep 14 17:31 loc1.txt
+-rw-rw-r-- 1 ruxin23fa ruxin23fa   1342243 Sep 14 17:32 loc.txt
+-rw-rw-r-- 1 ruxin23fa ruxin23fa      6353 Sep 14 17:35 79.0-125.0.txt
+-rw-rw-r-- 1 ruxin23fa ruxin23fa     44670 Sep 14 17:37 48.0-161.0.txt
+-rw-rw-r-- 1 ruxin23fa ruxin23fa        20 Sep 14 17:51 111.txt
+-rw-rw-r-- 1 ruxin23fa ruxin23fa        19 Sep 14 18:21 111a.txt
+-rw-rw-r-- 1 ruxin23fa ruxin23fa       176 Sep 14 18:59 ws4.txt
+-rw-rw-r-- 1 ruxin23fa ruxin23fa     22840 Sep 14 19:02 cmds1.log
+-rw-rw-r-- 1 ruxin23fa ruxin23fa      2022 Sep 14 19:04 cmds.log
+[ruxin23fa@sjsu FARE]$ w										(Use 'w' for 'ls -l | wc' command)
+     11      92     676
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+(Task 2: Compute the mean (average) of the fare amounts in each file of 2019-06.csv)
+ 1149  mkdir ws4											(Make a directory named ws4)
+ 1150  cd ws4												(Goto ws4)
+ 1151  mkdir FARE											(Make a directory named FARE)
+ 1152  cd FARE												(Goto FARE)
+ 1153  cat 2019-06.csv | grep ',48.0,161.0,' | cut -d "," -f 11 > 48.0-161.0.txt			(Find each line with locID from 48.0 to 161.0 and then cut the fare amounts from those lines and save it into 48.0-161.0.txt)
+ 1154  cat 48.0-161.0.txt | awk '{ sum += $1 } END { if (NR > 0) print sum / NR }' | bc > ws4.txt	(Compute the mean (average) of the fare amounts and save it into ws4.txt)
+ 1155  cat 2019-06.csv | grep ',79.0,125.0,' | cut -d "," -f 11 > 79.0-125.0.txt			(Find each line with locID from 79.0 to 125.0 and then cut the fare amounts from those lines and save it into 79.0-125.0.txt)
+ 1156  cat 79.0-125.0.txt | awk '{ sum += $1 } END { if (NR > 0) print sum / NR }' | bc >> ws4.txt	(Compute the mean (average) of the fare amounts and save it into ws4.txt)
+ 1158  vi ws4.txt
+ 1159  history > cmds.log
+ 1160  vi cmds.log

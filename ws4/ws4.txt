@@ -1,0 +1,2 @@
+9.02186		(The average of the fare amounts from the locationID 79.0 to 125.0 is 9.02186)
+7.82063		(The average of the fare amounts from the locationID 48.0 to 161.0 is 7.82063)
