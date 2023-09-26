@@ -1,0 +1,5 @@
+    249 1.0	(There are 249 services with dolocationID 1.0 from pickup locationID 234.0)
+   4463 48.0	(There are 4463 services with dolocationID 48.0 from pickup locationID 234.0)
+    156 223.0	(There are 156 services with dolocationID 223.0 from pickup locationID 234.0)
+(There are 0 services with dolocationID 3.0 from pickup locationID 234.0, because 3.0 is not the top 100 dolocation from pickuplocation 234.0)
+		

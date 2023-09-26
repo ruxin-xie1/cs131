@@ -1,0 +1,2 @@
+ 1301  cat 2019-08.csv | grep '[NY],234.0' | cut -d "," -f 9 |sort -n | uniq -c | sort -nr | head -100 > 2.txt (Find top 100 drop-off locations among all entries that have 234.0 as their pickup location )
+ 1302  for i in $(cat 2.txt|cut -c 9-13); do cat 2.txt | grep " $i" > do234/$i.txt; done (Using for loop to push content into txt files)
