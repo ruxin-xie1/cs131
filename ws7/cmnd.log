@@ -1,0 +1,13 @@
+
+
+sed -e 's/,/ /g' 2019-12.csv | awk '$19 >= 10 {++freq[$16]} END {for (tip in freq) print tip, freq[tip]}' > aa.txt    
+#use sed to change',' to ' ' and use awk to identify the frequency of the tip amounts from the customers who paid more than and equal to US$ 10.0 of the total amount. 
+
+
+awk '{print $2, $1}' aa.txt | sort -rn | head -20 | awk '{print $2, $1}' > results.txt
+#use awk to print frequency of the tip amounts as first column and tip amounts as second column. Then list the 20 lines in descending order.  
+
+
+awk '{print $1}' results.txt > ws7.txt
+#use awk to print tip amounts only to ws7.txt
+
