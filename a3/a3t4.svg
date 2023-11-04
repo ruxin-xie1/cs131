@@ -1,0 +1,16 @@
+set style fill transparent solid 0.2 noborder
+
+set datafile separator ' '
+
+set terminal pngcairo
+set out 'scatter.png'
+
+
+set title "travel distance and the Avg total amount paid" 
+set xlabel "travel distance" 
+set ylabel "Avg total amount paid"
+
+NO_ANIMATION = 1
+set autoscale x
+set autoscale y
+plot 'a3t4.txt' using 1:2 with circles lc rgb 'red'

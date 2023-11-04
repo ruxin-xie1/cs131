@@ -1,0 +1,13 @@
+set style data histogram
+set datafile separator ' '
+set boxwidth 0.6 absolute
+
+set terminal pngcairo
+set output 'a3t3.svg'
+set title "Avg tips by number of passengers"
+set xlabel "Number of passengers"
+set yrange[0:10]
+set xrange[0:10]
+
+plot 'a3t3.txt.txt' using 1:2:xtic(1) with boxes title "tips" lc rgb 'blue' lt 1
+

@@ -1,0 +1,19 @@
+1. Identify the top 10 pickup locations that yielded the highest average "total amount" in August 2019.
+cut -d, -f8,17 2019-08.csv > temp.txt
+awk -F, 'NR>1 {sum[$1]+=$2; count[$1]++} END {for (i in sum) print sum[i]/count[i], i }' temp.txt > temp1.txt
+sort -nr temp1.txt | head -10 > a3.txt
+
+2. pickup and dropoff location pair recorded the highest average "total amount" in August 2019
+cut -d, -f8,9,17 2019-08.csv > temp.txt
+awk -F, -v OFS=',' '{print $1"-"$2,$3}' temp.txt > temp1.txt
+awk -F, 'NR>1 {sum[$1]+=$2; count[$1]++} END {for (i in sum) print sum[i]/count[i], i }' temp1.txt > temp2.txt
+sort -nr temp2.txt | head -1 >> a3.txt
+
+3. the number of passengers and the avg tip amount in August 2019
+cut -d, -f4,14 2019-08.csv > temp.txt
+awk -F, 'NR>1 {sum[$1]+=$2; count[$1]++} END {for (i in sum) print sum[i]/count[i], i }' temp.txt > temp1.txt
+
+4. the travel distance and the avg total amount paid in August 2019
+cut -d, -f5,17 2019-08.csv > temp.txt
+awk -F, 'NR>1 {sum[$1]+=$2; count[$1]++} END {for (i in sum) print i, sum[i]/count[i] }' temp.txt > temp1.txt
+
