@@ -1,0 +1,10 @@
+550.531 Dragon
+487.704 Steel
+485 Flying
+475.947 Psychic
+458.077 Fire
+453.75 Rock
+445.742 Dark
+443.409 Electric
+439.562 Ghost
+437.5 Ground
