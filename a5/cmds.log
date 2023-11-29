@@ -1,0 +1,24 @@
+1. find the top 10 Type 1 that yielded the highest average "total" in Pokemon and the number of each type 1.
+cut -d, -f3,5 Pokemon.csv > temp.txt
+awk -F, 'NR>1 {sum[$1]+=$2; count[$1]++} END {for (i in sum) print sum[i]/count[i], i,  count[i]}' temp.txt > temp1.txt
+sort -nr temp1.txt | head -10 > a5.txt
+
+2. type 1 and type 2 pair recorded the top 10 highest average "total" and each type 1-2 pair recorded.
+cut -d, -f3,4,5 Pokemon.csv > temp.txt
+awk -F, -v OFS=',' '{print $1"-"$2,$3}' temp.txt > temp1.txt
+awk -F, 'NR>1 {sum[$1]+=$2; count[$1]++} END {for (i in sum) print sum[i]/count[i], i, count[i] }' temp1.txt > temp2.txt
+sort -nr temp2.txt | head -10 >> a5.txt
+
+3. The avg total of Legendary and none-Legendary of Pokemon and the number of them.
+cut -d, -f13,5 Pokemon.csv > temp.txt
+awk -F, 'NR>1 {sum[$2]+=$1; count[$2]++} END {for (i in sum) print sum[i]/count[i], i,  count[i]}' temp.txt >> a5.txt
+637.385 True 65
+417.214 False 735
+
+4. Find the name and number that the Legendary column is False have the total greater than the avg total of Legendary Pokemons.
+awk -F, '$13 == "False" && $5 > 637.385 {count++; print $2} END {print "Number of none-Legendary:" count}' Pokemon.csv >> a5.txt
+
+5. Find the relationship between attack and the avg total
+cut -d, -f5,7 Pokemon.csv > temp.txt
+awk -F, 'NR>1 {sum[$2]+=$1; count[$2]++} END {for (i in sum) print i, sum[i]/count[i] }' temp.txt >> a5.txt 
+
