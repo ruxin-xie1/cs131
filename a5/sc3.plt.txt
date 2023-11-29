@@ -1,0 +1,14 @@
+set terminal pngcairo
+set output "a5t1.png"
+set style data histogram
+set style fill solid
+set xtics rotate by -45
+set boxwidth 0.8
+set xtics ("Dragon" 0, "Steel" 1, "Flying" 2, "Psychic" 3, "Fire" 4, "Rock" 5, "Dark" 6, "Electric" 7, "Ghost" 8, "Ground" 9)
+
+set title "Average Total of Pokemon Types"
+set xlabel "Type"
+set ylabel "Total"
+set yrange [0:600]
+
+plot "a5t1.txt" using 2:xtic(1) title "Total"
