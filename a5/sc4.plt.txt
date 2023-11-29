@@ -1,0 +1,16 @@
+set style fill transparent solid 0.2 noborder
+
+set datafile separator ' '
+
+set terminal pngcairo
+set out 'scatter.png'
+
+
+set title "attack and the avg total" 
+set xlabel "attack" 
+set ylabel "Avg total"
+
+NO_ANIMATION = 1
+set autoscale x
+set autoscale y
+plot 'a5t2.txt' using 1:2 with circles lc rgb 'red'
